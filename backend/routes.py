@@ -55,7 +55,6 @@ def get_picture_by_id(id):
 ######################################################################
 @app.route("/picture", methods=["POST"])
 def create_picture():
-
     # get data from the json body
     picture_in = request.json
     print(picture_in)
@@ -74,7 +73,6 @@ def create_picture():
 # UPDATE A PICTURE
 ######################################################################
 
-
 @app.route("/picture/<int:id>", methods=["PUT"])
 def update_picture(id):
 
@@ -92,7 +90,6 @@ def update_picture(id):
 ######################################################################
 @app.route("/picture/<int:id>", methods=["DELETE"])
 def delete_picture(id):
-
     for picture in data:
         if picture["id"] == id:
             data.remove(picture)
